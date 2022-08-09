@@ -1,4 +1,4 @@
-const ChainedMap = require('../src/ChainedMap');
+const ChainedMap = require('../src/ChainedMap.ts');
 
 test('is Chainable', () => {
   const parent = { parent: true };

@@ -1,4 +1,4 @@
-const Chainable = require('./Chainable');
+const Chainable = require('./Chainable.ts');
 
 module.exports = class extends Chainable {
   constructor(parent) {
