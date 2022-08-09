@@ -326,9 +326,9 @@ test('merge with omit', () => {
 test('validate empty', () => {
   const config = new Config();
 
-  const errors = validate(config.toConfig());
-
-  expect(errors).toHaveLength(0);
+  expect(() => {
+    validate(config.toConfig());
+  }).not.toThrow();
 });
 
 test('validate with entry', () => {
@@ -336,9 +336,9 @@ test('validate with entry', () => {
 
   config.entry('index').add('src/index.js');
 
-  const errors = validate(config.toConfig());
-
-  expect(errors).toHaveLength(0);
+  expect(() => {
+    validate(config.toConfig());
+  }).not.toThrow();
 });
 
 test('validate with values', () => {
@@ -378,9 +378,9 @@ test('validate with values', () => {
     .loader('babel-loader')
     .options({ presets: ['alpha'] });
 
-  const errors = validate(config.toConfig());
-
-  expect(errors).toHaveLength(0);
+  expect(() => {
+    validate(config.toConfig());
+  }).not.toThrow();
 });
 
 test('toString', () => {
